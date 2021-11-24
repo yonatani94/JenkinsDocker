@@ -1,14 +1,15 @@
 jenkins:
-        systemMessage: "\n\nJohny setup for Jenkins Configuration as Code plugin......\n\n"
-        
-        
-        securityRealm:
-          local:
-            allowsSignup: false
-                 users:
-                    - id: ${JENKINS_ADMIN_ID}
-                    password: ${JENKINS_ADMIN_PASSWORD}
-            unclassified:
-            location:
-                url: https://jenkins.company.com
-                adminAddress: support@company.net
+  systemMessage: "\n\nJohny setup for Jenkins Configuration as Code plugin......\n\n"
+  numExecutors: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: admin
+        - id: developer
+          password: developer
+        - id: read
+          password: read       
+
+      
